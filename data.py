@@ -1,5 +1,10 @@
 
 URL = 'https://stellarburgers.nomoreparties.site/api/'
+REGISTER = 'https://stellarburgers.nomoreparties.site/api/auth/register'
+LOGIN = 'https://stellarburgers.nomoreparties.site/api/auth/login'
+AUTH = 'https://stellarburgers.nomoreparties.site/api/auth/user'
+ORDERS = 'https://stellarburgers.nomoreparties.site/api/orders'
+
 
 payload = {
         "email": "Shemakhanskiy@yandex.ru",

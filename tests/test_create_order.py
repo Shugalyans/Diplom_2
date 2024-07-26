@@ -23,7 +23,6 @@ class TestCreateOrder:
             'Проверяем, что авторизированному пользователю можно сделать заказ'
     )
     def test_create_order_with_authorization(self, make_new_user):
-        make_new_user
         new_order = Order()
         new_user = User()
         new_user.login_user(payload)
@@ -37,7 +36,6 @@ class TestCreateOrder:
             'Проверяем, что нельзя сделать заказ без выбранных ингредиентов'
     )
     def test_create_order_without_ingredients(self, make_new_user):
-        make_new_user
         new_order = Order()
         new_user = User()
         new_user.login_user(payload)
@@ -50,7 +48,6 @@ class TestCreateOrder:
             'Проверяем, что нельзя сделать заказ с неверным хешем ингредиента'
     )
     def test_create_order_with_wrong_ingredient_ID(self, make_new_user):
-        make_new_user
         new_order = Order()
         new_user = User()
         new_user.login_user(payload)

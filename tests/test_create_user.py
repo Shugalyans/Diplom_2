@@ -21,7 +21,6 @@ class TestCreateUser:
         'Проверяем, что пользователя с одинаковыми данными нельзя создать дважды'
     )
     def test_create_the_same_user(self, make_new_user):
-        make_new_user
         new_user = User()
 
         response = new_user.create_new_user(payload)

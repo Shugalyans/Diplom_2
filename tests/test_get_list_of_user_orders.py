@@ -23,7 +23,6 @@ class TestGetOrderList:
         'Проверяем, что при авторизированном пользователе можно получить список его заказов'
     )
     def test_get_order_list_with_authorization(self, make_new_user):
-        make_new_user
         new_order = Order()
         new_user = User()
         token = new_user.get_token(payload)

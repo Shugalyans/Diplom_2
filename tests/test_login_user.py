@@ -11,7 +11,6 @@ class TestLoginUser:
         'Проверяем, что можно авторизоваться под существующим пользователем'
     )
     def test_login_with_existing_user(self, make_new_user):
-        make_new_user
         new_user = User()
         response = new_user.login_user(payload)
 
@@ -23,7 +22,6 @@ class TestLoginUser:
     )
     @pytest.mark.parametrize('new_data', payload_for_login)
     def test_create_user_but_mandatory_field_is_empty(self, make_new_user, new_data):
-        make_new_user
         new_user = User()
         response = new_user.login_user(new_data)
 

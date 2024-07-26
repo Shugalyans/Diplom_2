@@ -11,7 +11,6 @@ class TestEditUser:
     )
     @pytest.mark.parametrize('profile_value', edited_profile)
     def test_edit_authorized_user(self, make_new_user, profile_value):
-        make_new_user
         new_user = User()
         token = new_user.get_token(payload)
         response = new_user.edit_user(profile_value, token)
@@ -24,7 +23,6 @@ class TestEditUser:
     )
     @pytest.mark.parametrize('profile_value', edited_profile)
     def test_edit_user_without_authorization(self, make_new_user, profile_value):
-        make_new_user
         new_user = User()
         response = new_user.edit_user(profile_value, token=None)
 
